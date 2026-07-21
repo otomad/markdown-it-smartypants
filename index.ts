@@ -1,5 +1,5 @@
 import type { PluginSimple } from "markdown-it";
-import { parseText } from "./utils.js";
+import parseText from "./utils.js";
 
 const smartypantsPlugin: PluginSimple = md => {
 	// Disable build-in replacement rule.
