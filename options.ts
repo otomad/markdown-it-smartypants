@@ -18,5 +18,5 @@ const optionNames = [
 export type Options = Partial<Record<(typeof optionNames)[number], boolean>>;
 
 export const defaultOptions = Object.freeze(
-	Object.fromEntries(optionNames.map(optionName => [optionName, true])) as Record<keyof Options, true>,
-);
+	Object.fromEntries(optionNames.map(optionName => [optionName, true])),
+) as Readonly<Record<keyof Options, true>>;
