@@ -1,7 +1,7 @@
 {
 	"name": "markdown-it-smartypants",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Plugin to translate directly input characters in keyboard into “smart” typographic punctuation",
 	"homepage": "https://github.com/otomad/markdown-it-smartypants#readme",
 	"bugs": {
 		"url": "https://github.com/otomad/markdown-it-smartypants/issues"
@@ -61,7 +61,6 @@
 	],
 	"files": [
 		"dist",
-		"!dist/tsconfig.tsbuildinfo",
-		"*.css"
+		"!dist/tsconfig.tsbuildinfo"
 	]
 }

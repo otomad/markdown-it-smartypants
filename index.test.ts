@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import MarkdownIt from "markdown-it";
+import markdownit from "markdown-it";
 import dedent from "dedent";
 import parseText from "./utils";
 import smartypantsPlugin from "./index";
@@ -11,7 +11,7 @@ import { chars } from "./constants";
 
 /** Render markdown with the smartypants plugin (all options enabled by default). */
 function md(options = {}) {
-	return new MarkdownIt().use(smartypantsPlugin, options);
+	return new markdownit().use(smartypantsPlugin, options);
 }
 
 // ---------------------------------------------------------------------------
