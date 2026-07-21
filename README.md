@@ -83,7 +83,7 @@ All options are **enabled by default**. Pass `false` for any rule you want to di
 
 ### Option detail: `Straight-CurlyQuote`
 
-This rule uses heuristic context-aware parsing adapted from the [Python-Markdown SmartyPants extension](https://github.com/Python-Markdown/markdown). It determines whether a straight quote should open or close based on surrounding characters, handling:
+This rule uses heuristic context-aware parsing adapted from the [Python-Markdown SmartyPants extension](https://Python-Markdown.github.io/extensions/smarty). It determines whether a straight quote should open or close based on surrounding characters, handling:
 
 - Quotes at the very start of text, followed by punctuation.
 - Nested double and single quotes (`“‘quoted’ words”`).
@@ -153,7 +153,7 @@ In the case above, SmartyPants will turn the apostrophe into an opening single-q
 ## Related Projects
 
 - [Original SmartyPants (Perl)](https://daringfireball.net/projects/smartypants/) — John Gruber’s original implementation.
-- [Python-Markdown SmartyPants](https://github.com/Python-Markdown/markdown) — the Python port that inspired parts of this project.
+- [Python-Markdown SmartyPants](https://Python-Markdown.github.io/extensions/smarty) — the Python port that inspired parts of this project.
 - [fullwidth-quotes](https://www.npmjs.com/package/fullwidth-quotes) — used internally for halfwidth-to-fullwidth curly quote conversion.
 
 ## License
