@@ -5,7 +5,7 @@ import { defaultOptions, type Options } from "./options.js";
 export default function parseText(text: string, options: Options = defaultOptions) {
 	for (const [key, defaultValue] of Object.entries(defaultOptions)) options[key as keyof Options] ??= defaultValue;
 
-	if (options["3EmDashes-3EmDash"])
+	if (options["3Hyphen-EmDash"])
 		// 3 hyphens → em dash (English em dash)
 		if (text.includes("---")) text = text.replaceAll(/(?<!-)---(?!-)/g, chars.emDash);
 	if (options["2Hyphen-EnDash"])
