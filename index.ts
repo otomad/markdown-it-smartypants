@@ -1,7 +1,8 @@
-import type { PluginSimple } from "markdown-it";
+import type { PluginWithOptions } from "markdown-it";
 import parseText from "./utils.js";
+import { defaultOptions, type Options } from "./options.js";
 
-const smartypantsPlugin: PluginSimple = md => {
+const smartypantsPlugin: PluginWithOptions<Options> = (md, pluginOptions = defaultOptions) => {
 	// Disable build-in replacement rule.
 	md.core.ruler.disable("replacements", true);
 
@@ -16,7 +17,7 @@ const smartypantsPlugin: PluginSimple = md => {
 
 		// Perform core parsing logic.
 		// At this moment, `*"foo"*` has been stripped to plain `"foo"`.
-		text = parseText(text);
+		text = parseText(text, pluginOptions);
 
 		// Write the replaced text back and submit it to the default renderer for output.
 		// It will automatically handle HTML escape, such as `&quot;` changes back to the normal character.

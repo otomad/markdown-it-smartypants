@@ -7,4 +7,12 @@ export default defineConfig({
 	semi: true,
 	singleQuote: false,
 	arrowParens: "avoid",
+	overrides: [
+		{
+			files: ["utils.*"],
+			options: {
+				printWidth: 150,
+			},
+		},
+	],
 });
