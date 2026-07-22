@@ -8,9 +8,11 @@
 
 > A [markdown-it](https://github.com/markdown-it/markdown-it) plugin that brings [SmartyPants](https://daringfireball.net/projects/smartypants/)-style typographic enhancements to your Markdown. Also usable as a standalone text transformer.
 
-**SmartyPants** — originally created by [John Gruber](https://daringfireball.net/) in Perl and later ported to Python — intelligently converts plain ASCII punctuation into their proper typographic equivalents: straight ("dumb") quotes become curly (“smart”) quotes, `--` becomes an en-dash, `---` becomes an em-dash, `...` becomes an ellipsis, and more.
+**SmartyPants** — *Smart Punctuations* — originally created by [John Gruber](https://daringfireball.net/) in Perl and later ported to Python — intelligently converts plain ASCII punctuation into their proper typographic equivalents: straight ("dumb") quotes become curly (“smart”) quotes, `--` becomes an en-dash, `---` becomes an em-dash, `...` becomes an ellipsis, and more.
 
 This project is a modern JavaScript/TypeScript implementation, available both as a markdown-it plugin and as a standalone utility function. It extends the original SmartyPants with additional typographic rules tailored for multilingual (especially CJK) content.
+
+Specifically, it will convert [CJK](https://en.wikipedia.org/wiki/CJK_characters) quotation marks to fullwidth by using [Unicode Standardized Variation Sequence](https://en.wikipedia.org/wiki/Variant_form_(Unicode)) (SVS), and also for some other plain punctuations that is easily to input by CJK input methods: `——` becomes `⸺`, `……` becomes `⋯⋯`, etc. And all conversions are opt-out.
 
 ## Installation
 
@@ -154,7 +156,7 @@ In the case above, SmartyPants will turn the apostrophe into an opening single-q
 
 - [Original SmartyPants (Perl)](https://daringfireball.net/projects/smartypants/) — John Gruber’s original implementation.
 - [Python-Markdown SmartyPants](https://Python-Markdown.github.io/extensions/smarty) — the Python port that inspired parts of this project.
-- [fullwidth-quotes](https://www.npmjs.com/package/fullwidth-quotes) — used internally for halfwidth-to-fullwidth curly quote conversion.
+- [fullwidth-quotes](https://github.com/otomad/fullwidth-quotes.js) — used internally for halfwidth-to-fullwidth curly quote conversion.
 
 ## License
 
